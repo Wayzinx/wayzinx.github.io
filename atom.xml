@@ -3,11 +3,11 @@
   <title>wayzinx</title>
   
   <subtitle>wzx_blog</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://wayzinx.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://wayzinx.github.io/"/>
   <updated>2022-02-07T08:10:30.775Z</updated>
-  <id>http://example.com/</id>
+  <id>https://wayzinx.github.io/</id>
   
   <author>
     <name>wayzinx</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>my new blog</title>
-    <link href="http://example.com/2022/02/07/my-new-blog/"/>
-    <id>http://example.com/2022/02/07/my-new-blog/</id>
+    <link href="https://wayzinx.github.io/2022/02/07/my-new-blog/"/>
+    <id>https://wayzinx.github.io/2022/02/07/my-new-blog/</id>
     <published>2022-02-07T01:05:56.000Z</published>
     <updated>2022-02-07T08:10:30.775Z</updated>
     
