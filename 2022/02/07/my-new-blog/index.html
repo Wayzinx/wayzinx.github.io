@@ -20,7 +20,7 @@
     <meta name="keywords" content="my new blog, wayzinx">
     <meta name="description" content="博客文章测试小标题测试
 换行测试第一行内容
-换行测试第二行内容##图片测试
+换行测试第二行内容##网络图片测试##本地图片测试
 
 ##超链接测试bilibili
 
@@ -337,7 +337,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -493,7 +493,7 @@
             <div id="articleContent">
                 <h1 id="博客文章测试"><a href="#博客文章测试" class="headerlink" title="博客文章测试"></a>博客文章测试</h1><h2 id="小标题测试"><a href="#小标题测试" class="headerlink" title="小标题测试"></a>小标题测试</h2><ul>
 <li>换行测试<br>第一行内容</li>
-<li>换行测试<br>第二行内容<br>##图片测试<br><img src="medias/images/logo2.gif# eg ./medias/images/logo2.gif" data-original="https://c-ssl.duitang.com/uploads/item/201809/18/20180918080122_ullfa.jpeg"></li>
+<li>换行测试<br>第二行内容<br>##网络图片测试<br><img src="medias/images/logo2.gif# eg ./medias/images/logo2.gif" data-original="https://img1.baidu.com/it/u=425649787,2164930474&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=889&amp;h=500"><br>##本地图片测试<br><img src="medias/images/logo2.gif# eg ./medias/images/logo2.gif" data-original="/medias/featureimages/8.jpg"></li>
 </ul>
 <p>##超链接测试<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/">bilibili</a></p>
 <ol>
@@ -1037,7 +1037,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="medias/images/logo2.gif# eg ./medias/images/logo2.gif" data-original="/medias/featureimages/5.jpg" class="responsive-img" alt="my new blog">
+                        <img src="medias/images/logo2.gif# eg ./medias/images/logo2.gif" data-original="/medias/featureimages/2.jpg" class="responsive-img" alt="my new blog">
                         
                         <span class="card-title">my new blog</span>
                     </div>
@@ -1068,37 +1068,51 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/02/07/my-new-blog/">
+                <a href="/2018/09/07/gong-neng-ce-shi/">
                     <div class="card-image">
                         
+                        <img src="medias/images/logo2.gif# eg ./medias/images/logo2.gif" data-original="/medias/featureimages/8.jpg" class="responsive-img" alt="typora-vue-theme主题介绍">
                         
-                        <img src="medias/images/logo2.gif# eg ./medias/images/logo2.gif" data-original="/medias/featureimages/5.jpg" class="responsive-img" alt="my new blog">
-                        
-                        <span class="card-title">my new blog</span>
+                        <span class="card-title">typora-vue-theme主题介绍</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-07
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            wayzinx
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
+                    </a>
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1511,12 +1525,12 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script>
+<script src="/node_modules/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"node_modules/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/node_modules/assets/haruto.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=(n.imageLazyLoadSetting.preloadRatio,Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight+240||document.documentElement.clientHeight+240)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/node_modules/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"node_modules/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/node_modules/assets/haruto.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=(n.imageLazyLoadSetting.preloadRatio,Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight+240||document.documentElement.clientHeight+240)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

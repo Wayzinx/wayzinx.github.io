@@ -6,7 +6,7 @@
   <link href="https://wayzinx.github.io/atom.xml" rel="self"/>
   
   <link href="https://wayzinx.github.io/"/>
-  <updated>2022-02-07T08:10:30.775Z</updated>
+  <updated>2022-02-07T15:52:57.354Z</updated>
   <id>https://wayzinx.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://wayzinx.github.io/2022/02/07/my-new-blog/"/>
     <id>https://wayzinx.github.io/2022/02/07/my-new-blog/</id>
     <published>2022-02-07T01:05:56.000Z</published>
-    <updated>2022-02-07T08:10:30.775Z</updated>
+    <updated>2022-02-07T15:52:57.354Z</updated>
     
     
       
@@ -34,6 +34,25 @@
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>typora-vue-theme主题介绍</title>
+    <link href="https://wayzinx.github.io/2018/09/07/gong-neng-ce-shi/"/>
+    <id>https://wayzinx.github.io/2018/09/07/gong-neng-ce-shi/</id>
+    <published>2018-09-07T01:25:00.000Z</published>
+    <updated>2022-02-07T15:49:23.221Z</updated>
+    
+    
+    
+    
+    <category term="Markdown" scheme="https://wayzinx.github.io/categories/Markdown/"/>
+    
+    
+    <category term="Typora" scheme="https://wayzinx.github.io/tags/Typora/"/>
+    
+    <category term="Markdown" scheme="https://wayzinx.github.io/tags/Markdown/"/>
     
   </entry>
   
