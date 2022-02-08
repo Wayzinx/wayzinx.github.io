@@ -4,36 +4,112 @@
   
     
     <entry>
-      <title>my new blog</title>
-      <link href="/2022/02/07/my-new-blog/"/>
-      <url>/2022/02/07/my-new-blog/</url>
+      <title>天气新闻APP</title>
+      <link href="/2022/01/04/tian-qi-xin-wen-app/"/>
+      <url>/2022/01/04/tian-qi-xin-wen-app/</url>
       
-        <content type="html"><![CDATA[<h1 id="博客文章测试"><a href="#博客文章测试" class="headerlink" title="博客文章测试"></a>博客文章测试</h1><h2 id="小标题测试"><a href="#小标题测试" class="headerlink" title="小标题测试"></a>小标题测试</h2><ul><li>换行测试<br>第一行内容</li><li>换行测试<br>第二行内容<br>##网络图片测试<br><img src="https://img1.baidu.com/it/u=425649787,2164930474&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=889&amp;h=500"><br>##本地图片测试<br><img src="/medias/featureimages/8.jpg"></li></ul><p>##超链接测试<br><a href="https://www.bilibili.com/">bilibili</a></p><ol><li>测试</li><li>测试</li><li>测试</li></ol>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>typora-vue-theme主题介绍</title>
-      <link href="/2018/09/07/gong-neng-ce-shi/"/>
-      <url>/2018/09/07/gong-neng-ce-shi/</url>
-      
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
       
       
       <categories>
           
-          <category> Markdown </category>
+          <category> android </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Typora </tag>
+            <tag> android </tag>
+            
+            <tag> mysql </tag>
+            
+            <tag> okhttp </tag>
+            
+            <tag> springboot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>双目识别项目</title>
+      <link href="/2021/01/04/shuang-mu-shi-bie-xiang-mu/"/>
+      <url>/2021/01/04/shuang-mu-shi-bie-xiang-mu/</url>
+      
+        <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> OpenCV </tag>
+            
+            <tag> camera </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Flask框架实操项目</title>
+      <link href="/2020/09/07/flask-xiang-mu-ying-yong/"/>
+      <url>/2020/09/07/flask-xiang-mu-ying-yong/</url>
+      
+        <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> mysql </tag>
+            
+            <tag> Flask </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>my new blog</title>
+      <link href="/2020/02/07/my-new-blog/"/>
+      <url>/2020/02/07/my-new-blog/</url>
+      
+        <content type="html"><![CDATA[<h1 id="博客文章测试"><a href="#博客文章测试" class="headerlink" title="博客文章测试"></a>博客文章测试</h1><h2 id="小标题测试"><a href="#小标题测试" class="headerlink" title="小标题测试"></a>小标题测试</h2><ul><li>换行测试<br>第一行内容</li><li>换行测试<br>第二行内容<br>##网络图片测试<br><img src="https://img1.baidu.com/it/u=425649787,2164930474&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=889&amp;h=500"><br>##本地图片测试<br><img src="/medias/featureimages/8.jpg"></li></ul><p>##超链接测试<br><a href="https://www.bilibili.com/">bilibili</a></p><ol><li>测试</li><li>测试</li><li>测试</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Test </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Test </tag>
             
             <tag> Markdown </tag>
             

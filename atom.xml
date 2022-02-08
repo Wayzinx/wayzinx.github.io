@@ -6,7 +6,7 @@
   <link href="https://wayzinx.github.io/atom.xml" rel="self"/>
   
   <link href="https://wayzinx.github.io/"/>
-  <updated>2022-02-07T15:52:57.354Z</updated>
+  <updated>2022-02-08T02:31:26.917Z</updated>
   <id>https://wayzinx.github.io/</id>
   
   <author>
@@ -17,11 +17,100 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>天气新闻APP</title>
+    <link href="https://wayzinx.github.io/2022/01/04/tian-qi-xin-wen-app/"/>
+    <id>https://wayzinx.github.io/2022/01/04/tian-qi-xin-wen-app/</id>
+    <published>2022-01-04T12:29:18.000Z</published>
+    <updated>2022-02-08T02:31:26.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="android" scheme="https://wayzinx.github.io/categories/android/"/>
+    
+    
+    <category term="android" scheme="https://wayzinx.github.io/tags/android/"/>
+    
+    <category term="mysql" scheme="https://wayzinx.github.io/tags/mysql/"/>
+    
+    <category term="okhttp" scheme="https://wayzinx.github.io/tags/okhttp/"/>
+    
+    <category term="springboot" scheme="https://wayzinx.github.io/tags/springboot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>双目识别项目</title>
+    <link href="https://wayzinx.github.io/2021/01/04/shuang-mu-shi-bie-xiang-mu/"/>
+    <id>https://wayzinx.github.io/2021/01/04/shuang-mu-shi-bie-xiang-mu/</id>
+    <published>2021-01-04T12:10:27.000Z</published>
+    <updated>2022-02-08T02:22:22.492Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://wayzinx.github.io/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://wayzinx.github.io/tags/Python/"/>
+    
+    <category term="OpenCV" scheme="https://wayzinx.github.io/tags/OpenCV/"/>
+    
+    <category term="camera" scheme="https://wayzinx.github.io/tags/camera/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flask框架实操项目</title>
+    <link href="https://wayzinx.github.io/2020/09/07/flask-xiang-mu-ying-yong/"/>
+    <id>https://wayzinx.github.io/2020/09/07/flask-xiang-mu-ying-yong/</id>
+    <published>2020-09-07T01:25:00.000Z</published>
+    <updated>2022-02-08T02:18:51.156Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://wayzinx.github.io/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://wayzinx.github.io/tags/Python/"/>
+    
+    <category term="mysql" scheme="https://wayzinx.github.io/tags/mysql/"/>
+    
+    <category term="Flask" scheme="https://wayzinx.github.io/tags/Flask/"/>
+    
+  </entry>
+  
+  <entry>
     <title>my new blog</title>
-    <link href="https://wayzinx.github.io/2022/02/07/my-new-blog/"/>
-    <id>https://wayzinx.github.io/2022/02/07/my-new-blog/</id>
-    <published>2022-02-07T01:05:56.000Z</published>
-    <updated>2022-02-07T15:52:57.354Z</updated>
+    <link href="https://wayzinx.github.io/2020/02/07/my-new-blog/"/>
+    <id>https://wayzinx.github.io/2020/02/07/my-new-blog/</id>
+    <published>2020-02-07T01:05:56.000Z</published>
+    <updated>2022-02-08T02:32:19.144Z</updated>
     
     
       
@@ -34,23 +123,10 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>typora-vue-theme主题介绍</title>
-    <link href="https://wayzinx.github.io/2018/09/07/gong-neng-ce-shi/"/>
-    <id>https://wayzinx.github.io/2018/09/07/gong-neng-ce-shi/</id>
-    <published>2018-09-07T01:25:00.000Z</published>
-    <updated>2022-02-07T15:49:23.221Z</updated>
+    <category term="Test" scheme="https://wayzinx.github.io/categories/Test/"/>
     
     
-    
-    
-    <category term="Markdown" scheme="https://wayzinx.github.io/categories/Markdown/"/>
-    
-    
-    <category term="Typora" scheme="https://wayzinx.github.io/tags/Typora/"/>
+    <category term="Test" scheme="https://wayzinx.github.io/tags/Test/"/>
     
     <category term="Markdown" scheme="https://wayzinx.github.io/tags/Markdown/"/>
     
