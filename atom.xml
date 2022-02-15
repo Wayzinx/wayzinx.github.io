@@ -6,7 +6,7 @@
   <link href="https://wayzinx.github.io/atom.xml" rel="self"/>
   
   <link href="https://wayzinx.github.io/"/>
-  <updated>2022-02-08T02:31:26.917Z</updated>
+  <updated>2022-02-12T01:49:42.600Z</updated>
   <id>https://wayzinx.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://wayzinx.github.io/2022/01/04/tian-qi-xin-wen-app/"/>
     <id>https://wayzinx.github.io/2022/01/04/tian-qi-xin-wen-app/</id>
     <published>2022-01-04T12:29:18.000Z</published>
-    <updated>2022-02-08T02:31:26.917Z</updated>
+    <updated>2022-02-12T01:49:42.600Z</updated>
     
     
       
@@ -37,9 +37,9 @@
     <category term="android" scheme="https://wayzinx.github.io/categories/android/"/>
     
     
-    <category term="android" scheme="https://wayzinx.github.io/tags/android/"/>
-    
     <category term="mysql" scheme="https://wayzinx.github.io/tags/mysql/"/>
+    
+    <category term="android" scheme="https://wayzinx.github.io/tags/android/"/>
     
     <category term="okhttp" scheme="https://wayzinx.github.io/tags/okhttp/"/>
     
@@ -52,7 +52,7 @@
     <link href="https://wayzinx.github.io/2021/01/04/shuang-mu-shi-bie-xiang-mu/"/>
     <id>https://wayzinx.github.io/2021/01/04/shuang-mu-shi-bie-xiang-mu/</id>
     <published>2021-01-04T12:10:27.000Z</published>
-    <updated>2022-02-08T02:22:22.492Z</updated>
+    <updated>2022-02-12T01:51:02.587Z</updated>
     
     
       
@@ -81,7 +81,7 @@
     <link href="https://wayzinx.github.io/2020/09/07/flask-xiang-mu-ying-yong/"/>
     <id>https://wayzinx.github.io/2020/09/07/flask-xiang-mu-ying-yong/</id>
     <published>2020-09-07T01:25:00.000Z</published>
-    <updated>2022-02-08T02:18:51.156Z</updated>
+    <updated>2022-02-12T01:50:03.164Z</updated>
     
     
       
@@ -99,9 +99,9 @@
     
     <category term="Python" scheme="https://wayzinx.github.io/tags/Python/"/>
     
-    <category term="mysql" scheme="https://wayzinx.github.io/tags/mysql/"/>
-    
     <category term="Flask" scheme="https://wayzinx.github.io/tags/Flask/"/>
+    
+    <category term="mysql" scheme="https://wayzinx.github.io/tags/mysql/"/>
     
   </entry>
   
