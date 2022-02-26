@@ -412,7 +412,104 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+                <h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="入门知识：双目测距原理-以下内容均摘抄自点击此处"><a href="#入门知识：双目测距原理-以下内容均摘抄自点击此处" class="headerlink" title="入门知识：双目测距原理(以下内容均摘抄自点击此处)"></a>入门知识：双目测距原理(以下内容均摘抄自<a target="_blank" rel="noopener" href="https://blog.csdn.net/u013832707/article/details/53781810">点击此处</a>)</h1><ul>
+<li>摄像机成像过程中，存在四个坐标系，分别是：1.像素坐标系2.图像坐标系3.相机坐标系4.世界坐标系<br>以像素坐标系建立坐标系，原点设为O，横纵坐标系分别设为v和u分别用来表示像素点在图像中的行数和列数。<br>图像坐标系的原点为相机的光轴与图像平面的交点，一般为图像平面的中心。图像坐标系的x轴与像素坐标系<br>u轴平行，y轴与v轴平行。令图像坐标系O1在像素坐标系在O-uv  中的坐标为（u0，v0）；dx和dy设为单位<br>像素在横轴和纵轴上的物理尺寸。两坐标系之间存在如下关系<br>u = x / dx + u0<br>v = y / dy + v0<br><img src="medias/images/logo2.gif# eg ./medias/images/logo2.gif" data-original="/medias/de/ca.png" alt="坐标轴"><br>用矩阵的方式表达此式子：<br><img src="medias/images/logo2.gif# eg ./medias/images/logo2.gif" data-original="/medias/de/Matrix.png" alt="矩阵表达式"><br><img src="medias/images/logo2.gif# eg ./medias/images/logo2.gif" data-original="/medias/de/light.png"><br><img src="medias/images/logo2.gif# eg ./medias/images/logo2.gif" data-original="/medias/de/estimation.png"></li>
+</ul>
+<h1 id="双目测距流程"><a href="#双目测距流程" class="headerlink" title="双目测距流程"></a>双目测距流程</h1><ul>
+<li>双目标定 -&gt; 立体校正 -&gt; 立体匹配 -&gt; 视差计算 -&gt; 深度计算</li>
+</ul>
+<h1 id="双目摄像机标定"><a href="#双目摄像机标定" class="headerlink" title="双目摄像机标定"></a>双目摄像机标定</h1><ul>
+<li>使用matlab的相机校准工具箱,用python存储标定好的数据  <h4 id="1-拍摄10到20张包含校准团的图像"><a href="#1-拍摄10到20张包含校准团的图像" class="headerlink" title="1.拍摄10到20张包含校准团的图像"></a>1.拍摄10到20张包含校准团的图像</h4><h4 id="2-提高标定精度，将一些模糊重影的图像删除，添加一些新的清晰明亮的图像，将3-coeefficients、Tangential-Distortion、Skew全部勾选"><a href="#2-提高标定精度，将一些模糊重影的图像删除，添加一些新的清晰明亮的图像，将3-coeefficients、Tangential-Distortion、Skew全部勾选" class="headerlink" title="2.提高标定精度，将一些模糊重影的图像删除，添加一些新的清晰明亮的图像，将3 coeefficients、Tangential Distortion、Skew全部勾选"></a>2.提高标定精度，将一些模糊重影的图像删除，添加一些新的清晰明亮的图像，将3 coeefficients、Tangential Distortion、Skew全部勾选</h4><h4 id="3-标定结果应用到OpenCV，-通过matlab标定后得到的旋转矩阵R和内参矩阵K，都需要转置以后才可以给OpenCV用，另外畸变向量中畸变系数的次序是：-k1-k2-p1-p2-k3"><a href="#3-标定结果应用到OpenCV，-通过matlab标定后得到的旋转矩阵R和内参矩阵K，都需要转置以后才可以给OpenCV用，另外畸变向量中畸变系数的次序是：-k1-k2-p1-p2-k3" class="headerlink" title="3.标定结果应用到OpenCV， 通过matlab标定后得到的旋转矩阵R和内参矩阵K，都需要转置以后才可以给OpenCV用，另外畸变向量中畸变系数的次序是：[k1, k2, p1, p2, k3]"></a>3.标定结果应用到OpenCV， 通过matlab标定后得到的旋转矩阵R和内参矩阵K，都需要转置以后才可以给OpenCV用，另外畸变向量中畸变系数的次序是：[k1, k2, p1, p2, k3]</h4></li>
+</ul>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> cv2
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+    <span class="token comment" spellcheck="true">#左摄像头参数</span>
+Lmatrix <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#标定参数填入</span>
+Ld <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#畸变系数参数填入</span>
+    <span class="token comment" spellcheck="true">#右摄像头参数</span>
+Rmatrix <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#标定参数填入</span>
+Rd <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#畸变系数参数填入</span>
+    <span class="token comment" spellcheck="true"># 旋转矩阵</span>
+self<span class="token punctuation">.</span>R <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true"># 平移矩阵</span>
+self<span class="token punctuation">.</span>T <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># 主点列坐标的差</span>
+self<span class="token punctuation">.</span>doffs <span class="token operator">=</span> <span class="token number">0.0</span>
+    <span class="token comment" spellcheck="true"># 指示上述内外参是否为经过立体校正后的结果</span>
+self<span class="token punctuation">.</span>isRectified <span class="token operator">=</span> <span class="token boolean">False</span>
+</code></pre>
+<h1 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h1><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">preprocess</span><span class="token punctuation">(</span>img1<span class="token punctuation">,</span> img2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true"># 彩色图->灰度图</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>img1<span class="token punctuation">.</span>ndim <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        img1 <span class="token operator">=</span> cv2<span class="token punctuation">.</span>cvtColor<span class="token punctuation">(</span>img1<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>COLOR_BGR2GRAY<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 通过OpenCV加载的图像通道顺序是BGR</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>img2<span class="token punctuation">.</span>ndim <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        img2 <span class="token operator">=</span> cv2<span class="token punctuation">.</span>cvtColor<span class="token punctuation">(</span>img2<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>COLOR_BGR2GRAY<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># 直方图均衡</span>
+    img1 <span class="token operator">=</span> cv2<span class="token punctuation">.</span>equalizeHist<span class="token punctuation">(</span>img1<span class="token punctuation">)</span>
+    img2 <span class="token operator">=</span> cv2<span class="token punctuation">.</span>equalizeHist<span class="token punctuation">(</span>img2<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> img1<span class="token punctuation">,</span> img2
+    <span class="token comment" spellcheck="true"># 消除畸变</span>
+<span class="token keyword">def</span> <span class="token function">undistortion</span><span class="token punctuation">(</span>image<span class="token punctuation">,</span> camera_matrix<span class="token punctuation">,</span> dist_coeff<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    undistortion_image <span class="token operator">=</span> cv2<span class="token punctuation">.</span>undistort<span class="token punctuation">(</span>image<span class="token punctuation">,</span> camera_matrix<span class="token punctuation">,</span> dist_coeff<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> undistortion_image
+</code></pre>
+<h1 id="利用立体匹配SGBM算法和实现双目测距"><a href="#利用立体匹配SGBM算法和实现双目测距" class="headerlink" title="利用立体匹配SGBM算法和实现双目测距"></a>利用立体匹配SGBM算法和实现双目测距</h1><ul>
+<li>参考博客:<a target="_blank" rel="noopener" href="https://blog.csdn.net/lg1259156776/article/details/53103527">BM匹配算法</a>  </li>
+<li>参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/dulingwen/article/details/98071584">深度测量</a>  </li>
+<li>参考博客：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/07b499ae5c7d">SGBM算法</a></li>
+</ul>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 视差计算</span>
+<span class="token keyword">def</span> <span class="token function">stereoMatchSGBM</span><span class="token punctuation">(</span>left_image<span class="token punctuation">,</span> right_image<span class="token punctuation">,</span> down_scale<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true"># SGBM匹配参数设置</span>
+    <span class="token keyword">if</span> left_image<span class="token punctuation">.</span>ndim <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        img_channels <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        img_channels <span class="token operator">=</span> <span class="token number">3</span>
+    blockSize <span class="token operator">=</span> <span class="token number">3</span>
+    paraml <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'minDisparity'</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+             <span class="token string">'numDisparities'</span><span class="token punctuation">:</span> <span class="token number">128</span><span class="token punctuation">,</span>
+             <span class="token string">'blockSize'</span><span class="token punctuation">:</span> blockSize<span class="token punctuation">,</span>
+             <span class="token string">'P1'</span><span class="token punctuation">:</span> <span class="token number">8</span> <span class="token operator">*</span> img_channels <span class="token operator">*</span> blockSize <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">,</span>
+             <span class="token string">'P2'</span><span class="token punctuation">:</span> <span class="token number">32</span> <span class="token operator">*</span> img_channels <span class="token operator">*</span> blockSize <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">,</span>
+             <span class="token string">'disp12MaxDiff'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+             <span class="token string">'preFilterCap'</span><span class="token punctuation">:</span> <span class="token number">63</span><span class="token punctuation">,</span>
+             <span class="token string">'uniquenessRatio'</span><span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+             <span class="token string">'speckleWindowSize'</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+             <span class="token string">'speckleRange'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+             <span class="token string">'mode'</span><span class="token punctuation">:</span> cv2<span class="token punctuation">.</span>STEREO_SGBM_MODE_SGBM_3WAY
+             <span class="token punctuation">}</span>
+ 
+    <span class="token comment" spellcheck="true"># 构建SGBM对象</span>
+    left_matcher <span class="token operator">=</span> cv2<span class="token punctuation">.</span>StereoSGBM_create<span class="token punctuation">(</span><span class="token operator">**</span>paraml<span class="token punctuation">)</span>
+    paramr <span class="token operator">=</span> paraml
+    paramr<span class="token punctuation">[</span><span class="token string">'minDisparity'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span>paraml<span class="token punctuation">[</span><span class="token string">'numDisparities'</span><span class="token punctuation">]</span>
+    right_matcher <span class="token operator">=</span> cv2<span class="token punctuation">.</span>StereoSGBM_create<span class="token punctuation">(</span><span class="token operator">**</span>paramr<span class="token punctuation">)</span>
+ 
+    <span class="token comment" spellcheck="true"># 计算视差图</span>
+    size <span class="token operator">=</span> <span class="token punctuation">(</span>left_image<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> left_image<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> down_scale <span class="token operator">==</span> <span class="token boolean">False</span><span class="token punctuation">:</span>
+        disparity_left <span class="token operator">=</span> left_matcher<span class="token punctuation">.</span>compute<span class="token punctuation">(</span>left_image<span class="token punctuation">,</span> right_image<span class="token punctuation">)</span>
+        disparity_right <span class="token operator">=</span> right_matcher<span class="token punctuation">.</span>compute<span class="token punctuation">(</span>right_image<span class="token punctuation">,</span> left_image<span class="token punctuation">)</span>
+ 
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        left_image_down <span class="token operator">=</span> cv2<span class="token punctuation">.</span>pyrDown<span class="token punctuation">(</span>left_image<span class="token punctuation">)</span>
+        right_image_down <span class="token operator">=</span> cv2<span class="token punctuation">.</span>pyrDown<span class="token punctuation">(</span>right_image<span class="token punctuation">)</span>
+        factor <span class="token operator">=</span> left_image<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">/</span> left_image_down<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+ 
+        disparity_left_half <span class="token operator">=</span> left_matcher<span class="token punctuation">.</span>compute<span class="token punctuation">(</span>left_image_down<span class="token punctuation">,</span> right_image_down<span class="token punctuation">)</span>
+        disparity_right_half <span class="token operator">=</span> right_matcher<span class="token punctuation">.</span>compute<span class="token punctuation">(</span>right_image_down<span class="token punctuation">,</span> left_image_down<span class="token punctuation">)</span>
+        disparity_left <span class="token operator">=</span> cv2<span class="token punctuation">.</span>resize<span class="token punctuation">(</span>disparity_left_half<span class="token punctuation">,</span> size<span class="token punctuation">,</span> interpolation<span class="token operator">=</span>cv2<span class="token punctuation">.</span>INTER_AREA<span class="token punctuation">)</span>
+        disparity_right <span class="token operator">=</span> cv2<span class="token punctuation">.</span>resize<span class="token punctuation">(</span>disparity_right_half<span class="token punctuation">,</span> size<span class="token punctuation">,</span> interpolation<span class="token operator">=</span>cv2<span class="token punctuation">.</span>INTER_AREA<span class="token punctuation">)</span>
+        disparity_left <span class="token operator">=</span> factor <span class="token operator">*</span> disparity_left
+        disparity_right <span class="token operator">=</span> factor <span class="token operator">*</span> disparity_right
+ 
+    <span class="token comment" spellcheck="true"># 真实视差（因为SGBM算法得到的视差是×16的）</span>
+    trueDisp_left <span class="token operator">=</span> disparity_left<span class="token punctuation">.</span>astype<span class="token punctuation">(</span>np<span class="token punctuation">.</span>float32<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">16</span><span class="token punctuation">.</span>
+    trueDisp_right <span class="token operator">=</span> disparity_right<span class="token punctuation">.</span>astype<span class="token punctuation">(</span>np<span class="token punctuation">.</span>float32<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">16</span><span class="token punctuation">.</span>
+ 
+    <span class="token keyword">return</span> trueDisp_left<span class="token punctuation">,</span> trueDisp_right
+</code></pre>
+
                 
             </div>
             <hr/>
